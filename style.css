@@ -1,16 +1,114 @@
-body {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
-  margin: 20px;
 }
 
-h1, h2 {
+body {
+  background-color: #c4ecfe;
+  padding: 1rem 0.3rem;
+}
+
+h1,
+h2 {
   text-align: center;
 }
 
+.container {
+  width: 100%;
+  display: flex;
+  margin-top: 2rem;
+  justify-content: space-between;
+}
+
+/* form codes */
+#gpaForm {
+  width: 50%;
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .form-group {
+  width: 48%;
   margin-bottom: 10px;
 }
 
+.form-group input {
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+  outline: none;
+  margin-top: 0.3rem;
+  border-radius: 0.3rem;
+  border: 1px solid rgb(191, 191, 191);
+}
+
+.form-group input:focus {
+  border-color: #0186c4;
+}
+
+.button {
+  width: 50%;
+  padding: 0.7rem 0.5rem;
+  margin-top: 1rem;
+  background-color: #0186c4;
+  color: #fff;
+  border: 1px solid #0186c4;
+  outline: none;
+  border-radius: 0.3rem;
+  display: block;
+  margin: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  color: #0186c4;
+  background-color: transparent;
+}
+
+/* result codes */
+.result {
+  width: 38%;
+  text-align: center;
+}
+
+.result h1 {
+  color: rgb(226, 3, 174);
+}
+
+#result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding: 0 4rem;
+}
+
 .hidden {
-  display: none;
+  visibility: hidden;
+}
+
+/* responsive codes */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  #gpaForm {
+    width: 90%;
+  }
+
+  .result {
+    width: 90%;
+    margin: auto;
+    margin-top: 3rem;
+  }
+
+  #result {
+    justify-content: space-evenly;
+  }
 }
